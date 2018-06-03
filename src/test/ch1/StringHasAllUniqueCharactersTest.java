@@ -18,7 +18,7 @@ class StringHasAllUniqueCharactersTest {
 	}
 
 	@Test
-	public void testAreAllCharactersAreUniqueWithinString() {
+	public void testAreAllCharactersAreUniqueWithinStringUsingHashSet() {
 		assertTrue(tester.areAllCharactersAreUniqueWithinString("abc"));
 		assertFalse(tester.areAllCharactersAreUniqueWithinString("abca"));
 		assertFalse(tester.areAllCharactersAreUniqueWithinString("abcdefa"));
@@ -26,6 +26,17 @@ class StringHasAllUniqueCharactersTest {
 		assertTrue(tester.areAllCharactersAreUniqueWithinString(""));
 		assertTrue(tester.areAllCharactersAreUniqueWithinString(null));
 		assertFalse(tester.areAllCharactersAreUniqueWithinString("  "));
+	}
+
+	@Test
+	public void testAreAllCharactersAreUniqueWithinStringUsingQuicksort() {
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort("abc"));
+		assertFalse(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort("abca"));
+		assertFalse(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort("abcdefa"));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort("a"));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort(""));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort(null));
+		assertFalse(tester.areAllCharactersAreUniqueWithinStringUsingQuicksort("  "));
 	}
 
 }
