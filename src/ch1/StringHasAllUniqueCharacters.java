@@ -2,6 +2,7 @@ package ch1;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Set;
 
 public class StringHasAllUniqueCharacters {
 
@@ -10,12 +11,16 @@ public class StringHasAllUniqueCharacters {
 	// What if you can not use additional data structures?
 
 	// Using HashSet
-	public boolean areAllCharactersAreUniqueWithinString(String test) {
+	public boolean areAllCharactersAreUniqueWithinStringUsingSet(String test) {
 		if (test == null) {
 			return true;
 		}
 		char[] charArray = test.toCharArray();
-		HashSet<Character> hscharset = new HashSet<Character>();
+		Set<Character> hscharset = new HashSet<Character>();
+		/*
+		 * for (char c : charArray) { if (hscharset.contains(c)) { return false; }
+		 * hscharset.add(c); }
+		 */
 
 		for (int i = 0; i < charArray.length; i++) {
 
@@ -24,6 +29,7 @@ public class StringHasAllUniqueCharacters {
 			}
 			hscharset.add(charArray[i]);
 		}
+
 		return true;
 	}
 
@@ -34,10 +40,9 @@ public class StringHasAllUniqueCharacters {
 		}
 		char[] charArray = test.toCharArray();
 		Arrays.sort(charArray);
-		
+
 		for (int i = 0; i < charArray.length - 1; i++) {
-			if(charArray[i] == charArray[i+1])
-			{
+			if (charArray[i] == charArray[i + 1]) {
 				return false;
 			}
 		}

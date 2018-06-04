@@ -12,20 +12,19 @@ class StringHasAllUniqueCharactersTest {
 	public StringHasAllUniqueCharacters tester;
 
 	@BeforeEach
-	public void setUpBeforeClass()
-	{
+	public void setUpBeforeClass() {
 		tester = new StringHasAllUniqueCharacters();
 	}
 
 	@Test
 	public void testAreAllCharactersAreUniqueWithinStringUsingHashSet() {
-		assertTrue(tester.areAllCharactersAreUniqueWithinString("abc"));
-		assertFalse(tester.areAllCharactersAreUniqueWithinString("abca"));
-		assertFalse(tester.areAllCharactersAreUniqueWithinString("abcdefa"));
-		assertTrue(tester.areAllCharactersAreUniqueWithinString("a"));
-		assertTrue(tester.areAllCharactersAreUniqueWithinString(""));
-		assertTrue(tester.areAllCharactersAreUniqueWithinString(null));
-		assertFalse(tester.areAllCharactersAreUniqueWithinString("  "));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingSet("abc"));
+		assertFalse(tester.areAllCharactersAreUniqueWithinStringUsingSet("abca"));
+		assertFalse(tester.areAllCharactersAreUniqueWithinStringUsingSet("abcdefa"));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingSet("a"));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingSet(""));
+		assertTrue(tester.areAllCharactersAreUniqueWithinStringUsingSet(null));
+		assertFalse(tester.areAllCharactersAreUniqueWithinStringUsingSet("  "));
 	}
 
 	@Test
