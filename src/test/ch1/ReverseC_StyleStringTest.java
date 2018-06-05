@@ -19,7 +19,8 @@ class ReverseC_StyleStringTest {
 
 	@Test
 	public void testreverseStringUsingArray() {
-		assertTrue(tester.reverseStringUsingArray(nullString + termCharString).equals(nullString + termCharString));
+
+		assertTrue(tester.reverseStringUsingArray((nullString == null ? nullString : nullString + termCharString)) == (nullString));
 		assertTrue(tester.reverseStringUsingArray("a" + termCharString).equals("a" + termCharString));
 		assertTrue(tester.reverseStringUsingArray("ab" + termCharString).equals("ba" + termCharString));
 		assertTrue(tester.reverseStringUsingArray("abc" + termCharString).equals("cba" + termCharString));
@@ -31,7 +32,7 @@ class ReverseC_StyleStringTest {
 	//
 	@Test
 	public void testcharacterreversing() {
-		assertTrue(tester.characterreversing(nullString + termCharString).equals(nullString + termCharString));
+		assertTrue(tester.characterreversing((nullString == null ? nullString : nullString + termCharString)) == (nullString));
 		assertTrue(tester.characterreversing("a" + termCharString).equals("a" + termCharString));
 		assertTrue(tester.characterreversing("ab" + termCharString).equals("ba" + termCharString));
 		assertTrue(tester.characterreversing("abc" + termCharString).equals("cba" + termCharString));

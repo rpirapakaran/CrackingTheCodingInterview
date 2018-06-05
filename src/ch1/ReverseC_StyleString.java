@@ -3,12 +3,13 @@ package ch1;
 public class ReverseC_StyleString {
 
 	/*
-	 Write code to reverse a C-Style String. (C-String means that “abcd” is represented as five characters, including the null character.)
+	 * Write code to reverse a C-Style String. (C-String means that “abcd” is
+	 * represented as five characters, including the null character.)
 	 */
-	
+
 	public String characterreversing(String str) {
-	//	int length = str.length();
-		if (str.length() < 3)
+		// int length = str.length();
+		if ((str == null) || str.length() < 3)
 			return str;
 		char[] tempArray = str.toCharArray();
 		int left = 0;
